@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    overwrite: true
+    destination: /home/ubuntu/blockchain-ico-horizon/server
+
+hooks:
+  BeforeInstall:
+
+  AfterInstall:
+
+  ApplicationStart:
+    - location: ./runScript.sh
+      timeout: 500
+      runas: root
+
+  ApplicationStop:
